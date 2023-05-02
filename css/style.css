@@ -1,0 +1,250 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  background: #000;
+  color: #fff;
+}
+
+/* Side bar */
+.side {
+  height: 100vh;
+  padding: 10px;
+  color: rgb(208, 208, 208);
+  /* text-align: center; */
+  background: #0f0f0f;
+}
+
+.side div {
+  display: flex;
+  align-items: center;
+}
+
+.side div:hover {
+  background: #222222;
+}
+
+.side div > svg {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.side .logo {
+  margin-bottom: 20px;
+  color: linear-gradient(#a0eeff, #5972a7);
+}
+
+.side .logo:hover {
+  background: #000;
+}
+
+.side h3 {
+  color: #ffff;
+}
+
+.side div {
+  padding: 14px 8px;
+  margin-bottom: 10px;
+}
+
+.side .active {
+  background: linear-gradient(#a0eeff, #5972a7);
+  color: #000;
+}
+.side .active:hover {
+  background: linear-gradient(#a0eeff, #5972a7);
+  color: #000;
+}
+
+/* Search bar */
+.search {
+  margin: 20px 0 50px 0;
+}
+
+.search div {
+  width: max-content;
+  padding: 10px 14px;
+  margin: 14px 0;
+  border: 1px solid rgb(208, 208, 208);
+  border-radius: 20px;
+}
+.search input {
+  border: none;
+  background: #000;
+  outline: none;
+  margin-left: 10px;
+  color: #fff;
+}
+
+/* play list */
+.body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.songs .item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.songs .item div {
+  display: flex;
+  align-items: center;
+}
+
+.songs .item div:last-child {
+  padding: 0 14px;
+}
+
+.songs .item div > * {
+  padding: 20px;
+}
+.songs .item div svg {
+  padding: 0;
+}
+
+.songs .odd {
+  background: #161616;
+}
+
+.songs .even {
+  background: #222222;
+}
+
+/* player */
+.player {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding: 20px 0;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+#play {
+  /* padding: 14px 16px; */
+  width: 45px;
+  height: 45px;
+  margin: 0 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: linear-gradient(#a0eeff, #5972a7);
+  color: #000;
+}
+/* .play-button.fa-pause {
+  padding: 12px 15px;
+} */
+
+/* song name */
+.song-name {
+  min-width: 150px;
+}
+
+/* progress bar */
+.progress-bar {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  top: 0;
+}
+
+.progress-bar:hover {
+  height: 10px;
+}
+
+.progress-bar:hover p {
+  height: 10px;
+}
+
+.progress-bar p {
+  position: absolute;
+  top: 0;
+  height: 4px;
+  /* width: 50%; */
+  background: linear-gradient(#a0eeff, #5972a7);
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+}
+.volume {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .volume input {
+  width: 100px;
+  height: 3px;
+  background: #fff;
+  color: linear-gradient(#a0eeff, #5972a7);
+  margin: 0 14px;
+} */
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin: 15px;
+  width: 100px;
+  height: 3px;
+  /* background: rgba(255, 255, 255, 0.6); */
+  /* border-radius: 5px; */
+  background-image: linear-gradient(#a0eeff, #5972a7);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: linear-gradient(#a0eeff, #5972a7);
+  /* cursor: ew-resize; */
+  box-shadow: 0 0 2px 0 #555;
+  /* transition: background 0.3s ease-in-out; */
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+.ok {
+  font-size: 15px;
+  font-family: Arial;
+  /* width: 140px; */
+  /* height: 50px; */
+  border-width: 1px;
+  color: #fff;
+  border-color: #314179;
+  font-weight: bold;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  box-shadow: inset 0px 1px 0px 0px #7a8eb9;
+  background: linear-gradient(#a0eeff, #5972a7);
+}
+
+.ok:hover {
+  background: linear-gradient(#5972a7, #a0eeff);
+}
